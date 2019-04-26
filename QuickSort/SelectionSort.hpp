@@ -11,6 +11,24 @@
 
 #include <stdio.h>
 #include <iostream>
-void selectionPort(int* left, int* right);
+namespace Sorting_Algorithms{
+    template <typename Iter>
+void selectionPort(Iter left, Iter right)
+    {
+        for(int *LeftPtr = &*left; LeftPtr < &*right; LeftPtr++)
+        {
+            int *min = LeftPtr;
+            for(int* RightPtr = LeftPtr+1; RightPtr < &*right ; RightPtr++)
+            {
+                if(*RightPtr < *min)
+                    min = RightPtr;
+            }
+            
+            if(min != LeftPtr)
+                std::swap(*LeftPtr , *min);
+        }
+        
+    }
+}
 
 #endif /* SelectionSort_hpp */

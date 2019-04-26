@@ -33,7 +33,7 @@ void printVec(std::vector<int> &data)
 
 int main(int argc, const char * argv[])
 {
-    int size = 100000;
+    int size = 10000000;
     std::vector<int> container(size);
     std::random_device rand;
     std::mt19937 mt {rand()};
@@ -47,13 +47,10 @@ int main(int argc, const char * argv[])
     std::generate(std::begin(container), std::end(container), gen);
     auto tmp = container;
     //printVec(container);
-    for(int LeftPtr = 0; LeftPtr < 1; LeftPtr++)
+    for(int i = 0; i < 1; i++)
     {
         std::cout << "Sorting....." << std::endl;
         auto  start1 = std::chrono::steady_clock::now();
-        //selectionPort(&container.front(), &container.back()+1);
-        //insertionPort(&container.front(), &container.back());
-        quickPort(&container.front(), &container.back());
         
 
         auto end1 = std::chrono::steady_clock::now();
@@ -72,13 +69,13 @@ int main(int argc, const char * argv[])
         std::cout << "Sorting....." << std::endl;
         auto  start = std::chrono::steady_clock::now();
         //selectionPort(&container.front(), &container.back()+1);
-        //insertionPort(&container.front(), &container.back());
-        recquickPort(&container.front(), &container.back());
+        Sorting_Algorithms::recquickPort(container.begin(), container.end());
+        //recquickPort(&container.front(), &container.back());
         
         
         auto end = std::chrono::steady_clock::now();
         std::chrono::duration<double> diff=(end - start);
-        std::cout << diff.count() << " recquickPort " << std::endl;
+        std::cout << diff.count() << " Test " << std::endl;
         if(std::is_sorted(container.begin(), container.end()))
         {
             std::cout << "Sorted" << std::endl;
