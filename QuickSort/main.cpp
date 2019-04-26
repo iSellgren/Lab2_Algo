@@ -14,156 +14,22 @@
 #include <functional>
 #include <iterator>
 #include <chrono>
+#include "InsertionSort.hpp"
+#include "SelectionSort.hpp"
+#include "QuickSort.hpp"
+#include "QuickSortMedian3.hpp"
+
 void printVec(std::vector<int> &data)
 {
-    for (int i = 0; i < data.size(); i++)
+    for (int LeftPtr = 0; LeftPtr < data.size(); LeftPtr++)
     {
-        std::cout << data[i] << std::endl;
+        std::cout << data[LeftPtr] << std::endl;
     }
 }
-int* medianPort(int* leftPtr, int* rightPtr)
-{
-    int* midptr = rightPtr;
-    if (*rightPtr < *leftPtr)
-    {
-        std::swap(*rightPtr,*leftPtr);
-        //std::cout << "swapping left, mid" << std::endl;
-    }
-    if(*midptr < *leftPtr)
-    {
-        std::swap(*midptr, *leftPtr);
-        //std::cout << "swapping left, right" << std::endl;
-    }
-    if(*rightPtr < *midptr)
-    {
-        std::swap(*rightPtr, *midptr);
-    }
-    
-    
-    
-    std::swap(*midptr, *(rightPtr-1));
-    //std::cout << rightPtr <<" rightPTR after end median " << std::endl;
-    return (rightPtr);
-    
-}
-int* partitionPort(int* left, int* right)
-{
-    int* i = left-1;
-    int* j = right;
-    
-    //int* pos = medianPort((right-1), left, (left + (right - left)/2));
-    int pivot = *(right);
-    
-    //std::cout << pivot << std::endl;
-    while(true)
-    {
-        while(*++i < pivot);
-        while(pivot < *--j) if(j == left) break;
-        
-        if(i >= j)
-            break;
-        std::swap(*i,*j);
-            
-    }
-    std::swap(*i,*right);
-    return i;
-}
-int* recpartitionPort(int* left, int* right, int* Pivot)
-{
-    
-    int* i = left-1;
-    int* j = right;
 
-    int pivot = *Pivot;
-    
-    while(true)
-    {
-        while(*++i < pivot);
-        while(pivot < *--j) if(j == left) break;
-        
-        if(i >= j)
-            break;
-        std::swap(*i,*j);
-        
-    }
-    std::swap(*i,*right);
-    return i;
-}
-void insertionPort(int* left ,int* right)
-{
-    
-    int *i;
-    for (i = right; i > left; i--)
-        if(*(i-1) > *i)
-        {
-            std::swap(*(i-1),*i);
-        }
-    
-    for (int* i = left + 2; i <= right; i++)
-    {
-        int value = *i;
-        int* j = i;
-        
-        while (j > left && *(j-1) > value)
-        {
-            *j = *(j - 1);
-            j--;
-        }
-        *j = value;
-    }
-}
-void recquickPort(int* left, int* right)
-{
-    
-    
-    if(left + 3 <= right)
-    {
-        int *pivot = medianPort(left, right);
-        int *pivotElement = recpartitionPort(left, right, pivot);
-    
-        recquickPort(left , pivotElement-1);
-        recquickPort(pivotElement+1, right);
-        
-    }
-    else
-        insertionPort(left, right);
-}
-void quickPort(int* left, int* right)
-{
-    
-    int* pivot;
-    
-    if(left < right)
-    {
-        pivot = partitionPort(left, right);
-        
-        quickPort(left , pivot-1);
-        quickPort(pivot+1, right);
-        
-    }
-}
-void selectionPort(int* left, int* right)
-{
-    std::cout << "SelectionPort" << std::endl;
-    auto start = std::chrono::steady_clock::now();
-    for(int *i = left; i < right; i++)
-    {
-        int *min = i;
-        for(int* j = i+1; j < right ; j++)
-        {
-            if(*j < *min)
-                min = j;
-        }
-        
-        if(min != i)
-            std::swap(*i , *min);
-    }
-    
-    auto end = std::chrono::steady_clock::now();
-    float diff = std::chrono::duration_cast<std::chrono::duration<float>>(end - start).count();
-    
-    std::cout << diff << " sec " << std::endl;
-}
+
+
+
 
 int main(int argc, const char * argv[])
 {
@@ -181,13 +47,13 @@ int main(int argc, const char * argv[])
     std::generate(std::begin(container), std::end(container), gen);
     auto tmp = container;
     //printVec(container);
-    for(int i = 0; i < 1; i++)
+    for(int LeftPtr = 0; LeftPtr < 1; LeftPtr++)
     {
         std::cout << "Sorting....." << std::endl;
         auto  start1 = std::chrono::steady_clock::now();
         //selectionPort(&container.front(), &container.back()+1);
-        insertionPort(&container.front(), &container.back());
-        //quickPort(&container.front(), &container.back());
+        //insertionPort(&container.front(), &container.back());
+        quickPort(&container.front(), &container.back());
         
 
         auto end1 = std::chrono::steady_clock::now();
