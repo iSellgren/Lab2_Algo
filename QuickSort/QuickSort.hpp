@@ -10,9 +10,10 @@
 #define QuickSort_hpp
 #include <iostream>
 #include <stdio.h>
+
 namespace Sorting_Algorithms{
     template <typename Iter>
-    int* partitionPort(Iter left, Iter right)
+    int* partitionSort(Iter left, Iter right)
     {
         int* LeftPtr = &*(left-1);
         int* RightPtr = &*right;
@@ -35,17 +36,17 @@ namespace Sorting_Algorithms{
 }
 namespace Sorting_Algorithms{
     template <typename Iter>
-    void quickPort(Iter left, Iter right)
+    void quickSort(Iter left, Iter right)
     {
         
         int* pivot;
         
         if(left < right)
         {
-            pivot = partitionPort(&*left, &*right);
+            pivot = partitionSort(&*left, &*right);
             
-            quickPort(&*left , &*pivot-1);
-            quickPort(&*pivot+1, &*right);
+            quickSort(&*left , &*pivot-1);
+            quickSort(&*pivot+1, &*right);
             
         }
     }

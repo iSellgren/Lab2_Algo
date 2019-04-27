@@ -50,14 +50,14 @@ namespace Generate{
 }
 namespace Generate{
     template <typename Iter>
-    void Increasing(Iter left, Iter right,int Const)
+    void Increasing(Iter left, Iter right,int startValue)
     {
         
         
         for(int* LeftPtr = &*left; LeftPtr < &*right; LeftPtr++)
         {
-            *LeftPtr = Const;
-            Const++;
+            *LeftPtr = startValue;
+            startValue++;
         }
         
         
@@ -65,17 +65,18 @@ namespace Generate{
 }
 namespace Generate{
     template <typename Iter>
-    void Decreasing(Iter left, Iter right,int Const)
+    void Decreasing(Iter left, Iter right,int startValue)
     {
         
         
         for(int* RightPtr = &*right-1; RightPtr >= &*left; RightPtr--)
         {
-            *RightPtr = Const;
-            Const++;
+            *RightPtr = startValue;
+            startValue++;
         }
         
         
     }
 }
+
 #endif /* Generate_hpp */

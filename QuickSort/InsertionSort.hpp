@@ -12,8 +12,9 @@
 #include <stdio.h>
 namespace Sorting_Algorithms{
 template <typename Iter>
-    void insertionPort(Iter left ,Iter right)
+    void insertionSort(Iter left ,Iter right)
     {
+        
         
          int *LeftPtr;
         for (LeftPtr = &*right; LeftPtr > &*left; LeftPtr--)
@@ -35,5 +36,6 @@ template <typename Iter>
          *RightPtr = value;
          }
     }
+
 }
 #endif /* InsertionSort_hpp */

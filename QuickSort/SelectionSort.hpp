@@ -13,7 +13,7 @@
 #include <iostream>
 namespace Sorting_Algorithms{
     template <typename Iter>
-void selectionPort(Iter left, Iter right)
+void selectionSort(Iter left, Iter right)
     {
         for(int *LeftPtr = &*left; LeftPtr < &*right; LeftPtr++)
         {
@@ -27,7 +27,6 @@ void selectionPort(Iter left, Iter right)
             if(min != LeftPtr)
                 std::swap(*LeftPtr , *min);
         }
-        
     }
 }
 

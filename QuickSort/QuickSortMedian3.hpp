@@ -14,7 +14,7 @@
 #include "InsertionSort.hpp"
 namespace Sorting_Algorithms{
     template <typename Iter>
-int* medianPort(Iter leftPtr, Iter rightPtr)
+int* medianOfThree(Iter leftPtr, Iter rightPtr)
     {
         int* midptr = (&*leftPtr +((&*rightPtr-&*leftPtr)/2));
         if (*rightPtr < *leftPtr)
@@ -42,7 +42,7 @@ int* medianPort(Iter leftPtr, Iter rightPtr)
 }
 namespace Sorting_Algorithms{
     template <typename Iter>
-int* recpartitionPort(Iter left, Iter right, Iter Pivot)
+int* recpartitionSort(Iter left, Iter right, Iter Pivot)
     {
         
         int* LeftPtr = &*(left-1);
@@ -66,21 +66,21 @@ int* recpartitionPort(Iter left, Iter right, Iter Pivot)
 }
 namespace Sorting_Algorithms{
     template <typename Iter>
-void recquickPort(Iter left, Iter right)
+void recquickSort(Iter left, Iter right)
     {
         
         
         if(&*left + 3 <= &*right)
         {
-            int *pivot = medianPort(&*left, &*right);
-            int *pivotElement = recpartitionPort(&*left, &*right, pivot);
+            int *pivot = medianOfThree(&*left, &*right);
+            int *pivotElement = recpartitionSort(&*left, &*right, pivot);
             
-            recquickPort(&*left , (pivotElement-1));
-            recquickPort((pivotElement+1), &*right);
+            recquickSort(&*left , (pivotElement-1));
+            recquickSort((pivotElement+1), &*right);
             
         }
         else
-            Sorting_Algorithms::insertionPort(left, right);
+            Sorting_Algorithms::insertionSort(left, right);
     }
 }
 #endif /* QuickSort_hpp */
