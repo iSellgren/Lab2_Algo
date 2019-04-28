@@ -14,8 +14,6 @@ namespace Sorting_Algorithms{
 template <typename Iter>
     void insertionSort(Iter left ,Iter right)
     {
-        
-        
          int *LeftPtr;
         for (LeftPtr = &*right; LeftPtr > &*left; LeftPtr--)
          if(*(LeftPtr-1) > *LeftPtr)

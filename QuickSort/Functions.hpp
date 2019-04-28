@@ -36,4 +36,20 @@ void selectionsort(std::vector<int> &data)
 {
     Sorting_Algorithms::selectionSort(data.begin(),data.end());
 }
+void randNum(std::vector<int> &data,int &lowBound)
+{
+    Generate::Random(data.begin(), data.end(), lowBound);
+}
+void incNum(std::vector<int> &data,int &lowBound)
+{
+    Generate::Increasing(data.begin(), data.end(), lowBound);
+}
+void decNum(std::vector<int> &data,int &lowBound)
+{
+    Generate::Decreasing(data.begin(), data.end(), lowBound);
+}
+void constNum(std::vector<int> &data,int &lowBound)
+{
+    Generate::Const(data.begin(), data.end(), lowBound);
+}
 #endif /* Functions_hpp */

@@ -20,68 +20,14 @@
 
 int main(int argc, const char * argv[])
 {
-    //int size = 100000;
-    //std::vector<int> container(size);
-    float test = 0;
-    //std::cout << "Sorting " << size <<" random elements whit range " << INT_MIN << " to " << INT_MAX << " This may take a while" << std::endl;
-
-    //Generate::Random(container.begin(), container.end(), INT_MIN,INT_MAX);
-    //Generate::Increasing(container.begin(), container.end(), 9);
-    //printVec(container);
-    
-    test = RandomAvgTime(selectionsort, 10,INT_MIN,INT_MAX,10);
-    
-    
-    //auto tmp = container;
-    //printVec(container);
-    for(int i = 0; i < 1; i++)
+    for( int i = 0; i < 1000000; i++)
     {
-        std::cout << "Sorting....." << std::endl;
-        
-        
-        //container = tmp;
-        
-        
-        //Sorting_Algorithms::insertionSort(container.begin(), container.end());
+        TimeMeas(selectionsort,randNum,10,INT_MIN,5);
 
-        /*
-        if(std::is_sorted(container.begin(), container.end()))
-        {
-            std::cout << "Sorted" << std::endl;
-            
-        }else
-        {
-            std::cout << "not sorted" << std::endl;
-            //std::cin.get();
-            
-            
-        }
-         */
-        //container = tmp;
-        //std::cout << "Sorting....." << std::endl;
-        //selectionPort(&container.front(), &container.back()+1);
-        //auto start = std::chrono::steady_clock::now();
-        //Sorting_Algorithms::selectionSort(container.begin(), container.end());
-        //recquickPort(&container.front(), &container.back());
-        //printVec(container);
-        //auto end = std::chrono::steady_clock::now();
-        //std::chrono::duration<float,std::milli> duration = end - start;
-        std::cout << test <<" NEW "<<  std::endl;
-        //std::cout << duration.count() <<" OLDIE "<<  std::endl;
-       /*
-        if(std::is_sorted(container.begin(), container.end()))
-        {
-            std::cout << "Sorted" << std::endl;
-            
-        }else
-        {
-            std::cout << "not sorted" << std::endl;
-            std::cin.get();
-        }
-        //printVec(container);
-
+        TimeMeas(insertionsort,randNum,10,INT_MIN,5);
         
-     */
+        TimeMeas(quicksort,randNum,10,INT_MIN,5);
+        TimeMeas(quicksortMedianof3,randNum,10,INT_MIN,5);
     }
     return 0;
 }

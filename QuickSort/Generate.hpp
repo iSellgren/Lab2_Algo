@@ -16,22 +16,21 @@ static std::random_device rd;
 static std::mt19937 mt (rd());
 int gen(int lowBound,int highBound)
 {
-    static std::uniform_int_distribution<int> range(lowBound, highBound);
+    static std::uniform_int_distribution<int> range(lowBound, INT_MAX);
     return range(mt);
     
 }
 namespace Generate{
     template <typename Iter>
-    void Random(Iter left, Iter right,int lowBound,int highBound)
+    void Random(Iter left, Iter right,int lowBound)
     {
 
 
         for(int* LeftPtr = &*left; LeftPtr < &*right; LeftPtr++)
         {
-            *LeftPtr = gen(lowBound,highBound);
+            *LeftPtr = gen(lowBound,INT_MAX);
         }
-        
-        
+
     }
 }
 namespace Generate{
@@ -44,7 +43,6 @@ namespace Generate{
         {
             *LeftPtr = Const;
         }
-        
         
     }
 }
