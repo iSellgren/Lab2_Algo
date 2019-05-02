@@ -11,28 +11,26 @@
 #include <iostream>
 #include <stdio.h>
 
-namespace Sorting_Algorithms{
     template <typename Iter>
     int* partitionSort(Iter left, Iter right)
     {
-        int* LeftPtr = &*(left-1);
-        int* RightPtr = &*right;
+    int* LeftPtr = &*(left-1);
+    int* RightPtr = &*right;
+    
+    int pivot = *(right);
+    
+    while(true)
+    {
+        while(*++LeftPtr < pivot);
+        while(pivot < *--RightPtr) if(RightPtr == left) break;
         
-        int pivot = *(right);
+        if(LeftPtr >= RightPtr)
+            break;
+        std::swap(*LeftPtr,*RightPtr);
         
-        while(true)
-        {
-            while(*++LeftPtr < pivot);
-            while(pivot < *--RightPtr) if(RightPtr == &*left) break;
-            
-            if(LeftPtr >= RightPtr)
-                break;
-            std::swap(*LeftPtr,*RightPtr);
-            
-        }
-        std::swap(*LeftPtr,*right);
-        return LeftPtr;
     }
+    std::swap(*LeftPtr,*right);
+    return &*LeftPtr;
 }
 namespace Sorting_Algorithms{
     template <typename Iter>

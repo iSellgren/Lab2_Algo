@@ -23,12 +23,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B565C39A2274370300E41A1B /* Generate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Generate.hpp; sourceTree = "<group>"; };
+		B565C39D2274558D00E41A1B /* TimeMeasuring.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TimeMeasuring.hpp; sourceTree = "<group>"; };
+		B565C3A02274842000E41A1B /* Functions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Functions.hpp; sourceTree = "<group>"; };
+		B58757AE22774C8000550C9A /* OSSA.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = OSSA.hpp; sourceTree = "<group>"; };
 		B59B4F58227315110011B32E /* QuickSort */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = QuickSort; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59B4F5B227315110011B32E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		B59B4F63227354570011B32E /* SelectionSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SelectionSort.hpp; sourceTree = "<group>"; };
 		B59B4F66227354700011B32E /* InsertionSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InsertionSort.hpp; sourceTree = "<group>"; };
 		B59B4F69227356B20011B32E /* QuickSortMedian3.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = QuickSortMedian3.hpp; sourceTree = "<group>"; };
 		B59B4F6C2273574A0011B32E /* QuickSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = QuickSort.hpp; sourceTree = "<group>"; };
+		B5BD59312279779200636721 /* TimSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TimSort.hpp; sourceTree = "<group>"; };
+		B5C3D252227852E9002112A1 /* MergeSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MergeSort.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +68,16 @@
 			isa = PBXGroup;
 			children = (
 				B59B4F5B227315110011B32E /* main.cpp */,
+				B565C39D2274558D00E41A1B /* TimeMeasuring.hpp */,
+				B565C39A2274370300E41A1B /* Generate.hpp */,
 				B59B4F66227354700011B32E /* InsertionSort.hpp */,
 				B59B4F63227354570011B32E /* SelectionSort.hpp */,
+				B5C3D252227852E9002112A1 /* MergeSort.hpp */,
+				B5BD59312279779200636721 /* TimSort.hpp */,
+				B58757AE22774C8000550C9A /* OSSA.hpp */,
 				B59B4F69227356B20011B32E /* QuickSortMedian3.hpp */,
 				B59B4F6C2273574A0011B32E /* QuickSort.hpp */,
+				B565C3A02274842000E41A1B /* Functions.hpp */,
 			);
 			path = QuickSort;
 			sourceTree = "<group>";
@@ -139,7 +151,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -198,7 +210,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;

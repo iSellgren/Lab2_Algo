@@ -12,11 +12,10 @@
 #include <stdio.h>
 #include <iostream>
 #include "InsertionSort.hpp"
-namespace Sorting_Algorithms{
     template <typename Iter>
-int* medianOfThree(Iter leftPtr, Iter rightPtr)
+Iter medianOfThree(Iter leftPtr, Iter rightPtr)
     {
-        int* midptr = (&*leftPtr +((&*rightPtr-&*leftPtr)/2));
+        Iter midptr = (leftPtr +((rightPtr-leftPtr)/2));
         if (*rightPtr < *leftPtr)
         {
             std::swap(*rightPtr,*leftPtr);
@@ -32,51 +31,43 @@ int* medianOfThree(Iter leftPtr, Iter rightPtr)
             std::swap(*rightPtr, *midptr);
         }
         
-        
-        
         std::swap(*midptr, *(rightPtr-1));
         //std::cout << rightPtr <<" rightPTR after end median " << std::endl;
-        return (&*rightPtr);
+        return (rightPtr);
         
     }
-}
-namespace Sorting_Algorithms{
     template <typename Iter>
-int* recpartitionSort(Iter left, Iter right, Iter Pivot)
+Iter recpartitionSort(Iter left, Iter right, Iter Pivot)
     {
-        
-        int* LeftPtr = &*(left-1);
-        int* RightPtr = &*right;
-        
+        Iter LeftPtr = (left-1);
+        Iter RightPtr = right;
         int pivot = *Pivot;
-        
         while(true)
         {
             while(*++LeftPtr < pivot);
-            while(pivot < *--RightPtr) if(&*RightPtr == &*left) break;
+            while(pivot < *--RightPtr) if(RightPtr == left) break;
             
             if(LeftPtr >= RightPtr)
                 break;
             std::swap(*LeftPtr,*RightPtr);
             
         }
-        std::swap(*LeftPtr,*&*right);
-        return &*LeftPtr;
+        std::swap(*LeftPtr,*right);
+        return LeftPtr;
     }
-}
 namespace Sorting_Algorithms{
     template <typename Iter>
 void recquickSort(Iter left, Iter right)
     {
         
         
-        if(&*left + 3 <= &*right)
+        if(left + 10 < right)
         {
-            int *pivot = medianOfThree(&*left, &*right);
-            int *pivotElement = recpartitionSort(&*left, &*right, pivot);
+            Iter pivot = medianOfThree(left, right);
+            Iter pivotElement = recpartitionSort(left, right, pivot);
             
-            recquickSort(&*left , (pivotElement-1));
-            recquickSort((pivotElement+1), &*right);
+            recquickSort(left , (pivotElement-1));
+            recquickSort((pivotElement+1), right);
             
         }
         else

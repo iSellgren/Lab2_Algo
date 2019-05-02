@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "QuickSort/main.cpp"
-            timestampString = "577983196.206593"
+            filePath = "QuickSort/TimeMeasuring.hpp"
+            timestampString = "578499802.08957"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "medianPort(int* leftPtr, int* rightPtr)"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "TimeMeas(F1 SortAlg, F2 GenAlg, T size, T lowBound, T times, std::string name)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,109 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "QuickSort/main.cpp"
-            timestampString = "577983196.207019"
+            filePath = "QuickSort/TimeMeasuring.hpp"
+            timestampString = "578499802.089656"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "medianPort(int* leftPtr, int* rightPtr)"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "TimeMeas(F1 SortAlg, F2 GenAlg, T size, T lowBound, T times, std::string name)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TimeMeasuring::RandomAvg(int, int, int, int)"
+                  moduleName = "QuickSort"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fredriksellgren/QuickSort/QuickSort/TimeMeasuring.hpp"
+                  timestampString = "578052903.5068229"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "476">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TimeMeasuring::RandomAvg(int, int, int, int)"
+                  moduleName = "QuickSort"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fredriksellgren/QuickSort/QuickSort/TimeMeasuring.hpp"
+                  timestampString = "578052903.508569"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "485">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QuickSort/TimeMeasuring.hpp"
+            timestampString = "578499802.089711"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "TimeMeas(F1 SortAlg, F2 GenAlg, T size, T lowBound, T times, std::string name)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "void TimeMeas&lt;int, void (*)(std::__1::vector&lt;int, std::__1::allocator&lt;int&gt; &gt;), void (*)(std::__1::vector&lt;int, std::__1::allocator&lt;int&gt; &gt;&amp;, int&amp;)&gt;(void (*)(std::__1::vector&lt;int, std::__1::allocator&lt;int&gt; &gt;), void (*)(std::__1::vector&lt;int, std::__1::allocator&lt;int&gt; &gt;&amp;, int&amp;), int, int, int)"
+                  moduleName = "QuickSort"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fredriksellgren/QuickSort/QuickSort/TimeMeasuring.hpp"
+                  timestampString = "578144312.731993"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "33">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "void TimeMeas&lt;int, void (*)(std::__1::vector&lt;int, std::__1::allocator&lt;int&gt; &gt;&amp;), void (*)(std::__1::vector&lt;int, std::__1::allocator&lt;int&gt; &gt;&amp;, int&amp;)&gt;(void (*)(std::__1::vector&lt;int, std::__1::allocator&lt;int&gt; &gt;&amp;), void (*)(std::__1::vector&lt;int, std::__1::allocator&lt;int&gt; &gt;&amp;, int&amp;), int, int, int)"
+                  moduleName = "QuickSort"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fredriksellgren/QuickSort/QuickSort/TimeMeasuring.hpp"
+                  timestampString = "578144312.735432"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "33">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QuickSort/TimeMeasuring.hpp"
+            timestampString = "578499802.089756"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "StdDiv(Iter left, Iter right,int size)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +137,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "QuickSort/main.cpp"
-            timestampString = "577983196.207304"
+            filePath = "QuickSort/TimeMeasuring.hpp"
+            timestampString = "578499802.0898"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "partitionPort(int* left, int* right)"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "TimeMeas(F1 SortAlg, F2 GenAlg, T size, T lowBound, T times, std::string name)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,14 +153,109 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "QuickSort/main.cpp"
-            timestampString = "577983196.2075551"
+            filePath = "QuickSort/OSSA.hpp"
+            timestampString = "578493274.8919359"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "partitionPort(int* left, int* right)"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "OSSA(Iter left, Iter right)"
             landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QuickSort/TimeMeasuring.hpp"
+            timestampString = "578499802.089861"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "StdDiv(Iter left, Iter right,int size)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QuickSort/TimeMeasuring.hpp"
+            timestampString = "578499802.089905"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "StdDiv(Iter left, Iter right,int size)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QuickSort/TimeMeasuring.hpp"
+            timestampString = "578499802.089946"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "TimeMeas(F1 SortAlg, F2 GenAlg, T size, T lowBound, T times, std::string name)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "void TimeMeas&lt;int, void (*)(std::__1::vector&lt;int, std::__1::allocator&lt;int&gt; &gt;&amp;), void (*)(std::__1::vector&lt;int, std::__1::allocator&lt;int&gt; &gt;&amp;, int&amp;)&gt;(void (*)(std::__1::vector&lt;int, std::__1::allocator&lt;int&gt; &gt;&amp;), void (*)(std::__1::vector&lt;int, std::__1::allocator&lt;int&gt; &gt;&amp;, int&amp;), int, int, int, std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;)"
+                  moduleName = "QuickSort"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fredriksellgren/QuickSort/QuickSort/TimeMeasuring.hpp"
+                  timestampString = "578490391.134203"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "529">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "void TimeMeas&lt;int, void (*)(std::__1::vector&lt;int, std::__1::allocator&lt;int&gt; &gt;&amp;), void (*)(std::__1::vector&lt;int, std::__1::allocator&lt;int&gt; &gt;&amp;, int&amp;)&gt;(void (*)(std::__1::vector&lt;int, std::__1::allocator&lt;int&gt; &gt;&amp;), void (*)(std::__1::vector&lt;int, std::__1::allocator&lt;int&gt; &gt;&amp;, int&amp;), int, int, int, std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;)"
+                  moduleName = "QuickSort"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fredriksellgren/QuickSort/QuickSort/TimeMeasuring.hpp"
+                  timestampString = "578490391.138101"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "543">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "void TimeMeas&lt;int, void (*)(std::__1::vector&lt;int, std::__1::allocator&lt;int&gt; &gt;&amp;), void (*)(std::__1::vector&lt;int, std::__1::allocator&lt;int&gt; &gt;&amp;, int&amp;)&gt;(void (*)(std::__1::vector&lt;int, std::__1::allocator&lt;int&gt; &gt;&amp;), void (*)(std::__1::vector&lt;int, std::__1::allocator&lt;int&gt; &gt;&amp;, int&amp;), int, int, int, std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;)"
+                  moduleName = "QuickSort"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fredriksellgren/QuickSort/QuickSort/TimeMeasuring.hpp"
+                  timestampString = "578490391.140543"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "1194">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

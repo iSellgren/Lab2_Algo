@@ -13,11 +13,35 @@
 #include <iostream>
 #include "Functions.hpp"
 #include <string>
+
+
+int multiply(int value,int mul) {
+    
+    int ret=0;
+    
+    int mulabs = mul;
+    if(mulabs < 0) mulabs = 0 -mulabs;
+    
+    for(int n=0;n<mulabs;n++) {
+        ret += value;
+    }
+    
+    if(mul < 0) ret = 0-ret;
+    
+    return ret+ret;
+}
+struct subject {
+    float mean;
+    float Stdev;
+    float Sample;
+    float Size;
+    
+};
 template <typename Iter>
-void StdDiv(Iter left, Iter right)
+subject StdDiv(Iter left, Iter right,int size)
 {
     float N = std::distance(left, right);
-    float const mean = std::accumulate(left, right, float{}) / N;
+    float  mean = std::accumulate(left, right, float{}) / N;
     
     float accum = 0.0;
     std::for_each (left, right, [&](const double d) {
@@ -26,27 +50,27 @@ void StdDiv(Iter left, Iter right)
     float variance = accum / N;
     float stdev = sqrt(variance);
     
-    std::cout << mean <<" T[ms] " << std::endl;
-    std::cout << stdev <<" Stdev[ms] " << std::endl;
-
-    std::cout << N <<" Samples" <<std::endl;
+    subject test ={mean,stdev,N,static_cast<float>(size)};
+    return test;
+    
 
 }
 
 template <typename T,typename F1,typename F2>
-void TimeMeas(F1 SortAlg, F2 GenAlg, T size, T lowBound, T times)
+void TimeMeas(F1 SortAlg, F2 GenAlg, T size, T lowBound, T times, std::string name)
     {
-        for(int x = 1; x < times+1; x++)
+        int Tid = (times+1);
+       std::vector<subject> bar;
+        std::vector<float> values;
+        for(int j = 1; j < Tid; j++)
         {
-            
-            int N = pow(size+(2000*x),1);
-            std::vector<float> values;
-            std::vector<int> container(N);
-            GenAlg(container,lowBound);
-            
-            for(int i = 1; i < times+1; i++)
+            int test = multiply(size, j);
+            for(int i = 1; i < Tid; i++)
             {
+        
+                std::vector<int> container(test);
                 
+                GenAlg(container,lowBound);
                 
                 auto start = std::chrono::steady_clock::now();
                 SortAlg(container);
@@ -55,15 +79,33 @@ void TimeMeas(F1 SortAlg, F2 GenAlg, T size, T lowBound, T times)
                 
                 
                 values.push_back(duration.count());
-                
+
+                if(!std::is_sorted(container.begin(), container.end()))
+                {
+                    std::cout << "Not Sorted" << std::endl;
+                    std::cin.get();
+                }
+
             }
-            std::cout << container.size() << " N " << std::endl;
-            StdDiv(values.begin(), values.end());
+            bar.push_back(StdDiv(values.begin(), values.end(),test));
             values.clear();
-            container.clear();
         }
-        
-        
+        std::ofstream myfile;
+        myfile.open (name+".txt", std::ios::app);
+        for(int k = 0; k < bar.size(); k++)
+        {
+            //std::string meanStr = std::to_string(bar[k].mean),
+              //  stdevStr = std::to_string(bar[k].Stdev);
+            //meanStr[meanStr.find('.')] = ',';
+            //stdevStr[stdevStr.find('.')] = ',';
+         
+            myfile << bar[k].Size << ';' << bar[k].mean << ';' << bar[k].Stdev << ';' << bar[k].Sample << "\r\n";
+         
+            
+//            myfile << bar[k].Size << ';' << meanStr << ';' << stdevStr << ';' << bar[k].Sample << "\r\n";
+            
+        }
+        myfile.close();
     }
         
 

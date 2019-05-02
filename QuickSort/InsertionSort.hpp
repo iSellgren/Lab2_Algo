@@ -18,20 +18,20 @@ template <typename Iter>
         for (LeftPtr = &*right; LeftPtr > &*left; LeftPtr--)
          if(*(LeftPtr-1) > *LeftPtr)
          {
-         std::swap(*(LeftPtr-1),*LeftPtr);
+             std::swap(*(LeftPtr-1),*LeftPtr);
          }
          
          for (int* LeftPtr = &*(left + 2); LeftPtr <= &*right; LeftPtr++)
          {
-         int value = *LeftPtr;
-         int* RightPtr = LeftPtr;
-         
-         while (RightPtr > &*left && *(RightPtr-1) > value)
-         {
-         *RightPtr = *(RightPtr - 1);
-         RightPtr--;
-         }
-         *RightPtr = value;
+             int value = *LeftPtr;
+             int* RightPtr = LeftPtr;
+             
+             while (RightPtr > &*left && *(RightPtr-1) > value)
+             {
+             *RightPtr = *(RightPtr - 1);
+             RightPtr--;
+             }
+             *RightPtr = value;
          }
     }
 

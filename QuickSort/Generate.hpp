@@ -26,7 +26,7 @@ namespace Generate{
     {
 
 
-        for(int* LeftPtr = &*left; LeftPtr < &*right; LeftPtr++)
+        for(Iter LeftPtr = left; LeftPtr < right; LeftPtr++)
         {
             *LeftPtr = gen(lowBound,INT_MAX);
         }
@@ -39,7 +39,7 @@ namespace Generate{
     {
         
         
-        for(int* LeftPtr = &*left; LeftPtr < &*right; LeftPtr++)
+        for(Iter LeftPtr = left; LeftPtr < right; LeftPtr++)
         {
             *LeftPtr = Const;
         }
@@ -47,12 +47,12 @@ namespace Generate{
     }
 }
 namespace Generate{
-    template <typename Iter>
-    void Increasing(Iter left, Iter right,int startValue)
+    template <typename Iter, typename T>
+    void Increasing(Iter left, Iter right,T startValue)
     {
         
         
-        for(int* LeftPtr = &*left; LeftPtr < &*right; LeftPtr++)
+        for(Iter LeftPtr = left; LeftPtr < right; LeftPtr++)
         {
             *LeftPtr = startValue;
             startValue++;
@@ -62,12 +62,12 @@ namespace Generate{
     }
 }
 namespace Generate{
-    template <typename Iter>
-    void Decreasing(Iter left, Iter right,int startValue)
+    template <typename Iter, typename T>
+    void Decreasing(Iter left, Iter right,T startValue)
     {
         
         
-        for(int* RightPtr = &*right-1; RightPtr >= &*left; RightPtr--)
+        for(Iter RightPtr = right-1; RightPtr >= left; RightPtr--)
         {
             *RightPtr = startValue;
             startValue++;
